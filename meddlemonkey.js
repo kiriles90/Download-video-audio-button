@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name        Download video / audio button
 // @namespace   https://y2mate.com/
-// @version     1.5 (mod)
-// @date        2019-07-23
+// @version     1.6
+// @date        2020-01-19
 // @homepage    https://y2mate.com/
+// @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/meddlemonkey.js
+// @downloadURL https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/meddlemonkey.js
 // @include     http://*
 // @include     https://*
 // @run-at      document-idle
