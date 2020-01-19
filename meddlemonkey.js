@@ -3,6 +3,7 @@
 // @namespace   https://y2mate.com/
 // @version     1.6
 // @date        2020-01-19
+// @author      github.com/kiriles90
 // @homepage    https://y2mate.com/
 // @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/meddlemonkey.js
 // @downloadURL https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/meddlemonkey.js
