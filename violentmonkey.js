@@ -5,8 +5,8 @@
 // @date        2020-01-23
 // @author      github.com/kiriles90
 // @homepage    https://y2mate.com/
-// @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/meddlemonkey.js
-// @downloadURL https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/meddlemonkey.js
+// @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
+// @downloadURL https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
 // @include     http://www.youtube.com/*
 // @include     https://www.youtube.com/*
 // @run-at      document-idle
