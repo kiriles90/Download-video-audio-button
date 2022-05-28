@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        Download video-audio button
-// @namespace   https://y2mate.com/
+// @namespace   github.com/kiriles90
 // @version     1.5
 // @date        2022-05-28
 // @author      github.com/kiriles90
