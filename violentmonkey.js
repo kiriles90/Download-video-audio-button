@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        Download video-audio button
 // @namespace   https://y2mate.com/
-// @version     1.1
-// @date        2020-01-23
+// @version     1.5
+// @date        2022-05-28
 // @author      github.com/kiriles90
 // @homepage    https://y2mate.com/
 // @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
