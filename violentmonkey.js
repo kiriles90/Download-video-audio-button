@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Download video-audio button
 // @namespace   github.com/kiriles90
-// @version     2.0
+// @version     2.1
 // @date        2022-11-20
 // @author      github.com/kiriles90
 // @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
@@ -17,11 +17,10 @@ var AKoiMain = {
     DocOnLoad: function (o) {
         try {
             if (null != o && null != o.body && null != o.location && ((AKoiMain.vid = AKoiMain.getVid(o)), AKoiMain.vid)) {
-                var d = o.getElementsByClassName('ytd-download-button-renderer')[0],
+                var d = o.getElementsByClassName('ytd-download-button-renderer')[0].parentNode,
                     e = o.querySelector("#y2mateconverter"),
                     n = AKoiMain.GetCommandButton();
-                d.parentNode.setAttribute("style", "display: inline-block; cursor: pointer");
-                d.setAttribute("style", "pointer-events: none");
+                d.setAttribute("style", "display: inline-block");
                 null == e, (AKoiMain.oldUrl = o.location.href), AKoiMain.checkChangeVid();
             }
             return !0;
@@ -34,6 +33,7 @@ var AKoiMain = {
         (AKoiMain.vid = AKoiMain.getVid(o)), AKoiMain.vid ? null != o.querySelector("#actions-inner") ? AKoiMain.DocOnLoad(o) : setTimeout(function () { AKoiMain.WaitLoadDom(o); }, 1e3) : AKoiMain.checkChangeVid();
     },
     goToY2mate: function (o) {
+        o.stopPropagation();
         try {
             var t = "https://y2mate.com/youtube-mp3/" + AKoiMain.vid + "/?utm_source=chrome_addon";
             window.open(t, "_blank");
