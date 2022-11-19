@@ -1,10 +1,9 @@
 // ==UserScript==
 // @name        Download video-audio button
 // @namespace   github.com/kiriles90
-// @version     1.9
+// @version     2.0
 // @date        2022-11-20
 // @author      github.com/kiriles90
-// @homepage    https://y2mate.com/
 // @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
 // @downloadURL https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
 // @include     http://www.youtube.com/*
@@ -13,35 +12,26 @@
 // @grant       none
 // ==/UserScript==
 var AKoiMain = {
-    oXHttpReq: null,
     vid: null,
     oldUrl: null,
     DocOnLoad: function (o) {
         try {
             if (null != o && null != o.body && null != o.location && ((AKoiMain.vid = AKoiMain.getVid(o)), AKoiMain.vid)) {
-                o.querySelector("ytd-download-button-renderer").setAttribute("style", "display: inline-block; cursor: pointer;");
-                o.querySelector("ytd-download-button-renderer").querySelector("ytd-button-renderer").setAttribute("style", "pointer-events: none");
-                var e = o.querySelector("#y2mateconverter"),
+                var d = o.getElementsByClassName('ytd-download-button-renderer')[0],
+                    e = o.querySelector("#y2mateconverter"),
                     n = AKoiMain.GetCommandButton();
+                d.parentNode.setAttribute("style", "display: inline-block; cursor: pointer");
+                d.setAttribute("style", "pointer-events: none");
                 null == e, (AKoiMain.oldUrl = o.location.href), AKoiMain.checkChangeVid();
             }
             return !0;
         } catch (o) {}
     },
     checkChangeVid: function () {
-        setTimeout(function () {
-            AKoiMain.oldUrl == window.location.href ? AKoiMain.checkChangeVid() : AKoiMain.WaitLoadDom(window.document);
-        }, 1e3);
+        setTimeout(function () { AKoiMain.oldUrl == window.location.href ? AKoiMain.checkChangeVid() : AKoiMain.WaitLoadDom(window.document); }, 1e3);
     },
     WaitLoadDom: function (o) {
-        (AKoiMain.vid = AKoiMain.getVid(o)),
-            AKoiMain.vid
-                ? null != o.querySelector("#actions-inner")
-                    ? AKoiMain.DocOnLoad(o)
-                    : setTimeout(function () {
-                          AKoiMain.WaitLoadDom(o);
-                      }, 1e3)
-                : AKoiMain.checkChangeVid();
+        (AKoiMain.vid = AKoiMain.getVid(o)), AKoiMain.vid ? null != o.querySelector("#actions-inner") ? AKoiMain.DocOnLoad(o) : setTimeout(function () { AKoiMain.WaitLoadDom(o); }, 1e3) : AKoiMain.checkChangeVid();
     },
     goToY2mate: function (o) {
         try {
@@ -52,17 +42,7 @@ var AKoiMain = {
     GetCommandButton: function () {
         try {
             var o = document.getElementsByTagName("ytd-download-button-renderer")[0];
-            return (
-                (o.id = "y2mateconverter"),
-                o.addEventListener(
-                    "click",
-                    function (o) {
-                        AKoiMain.goToY2mate(o);
-                    },
-                    !0
-                ),
-                o
-            );
+            return ((o.id = "y2mateconverter"), o.addEventListener("click", function (o) { AKoiMain.goToY2mate(o); }, !0), o);
         } catch (o) {}
     },
     getVid: function (o) {
