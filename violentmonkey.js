@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        Download video-audio button
 // @namespace   github.com/kiriles90
-// @version     2.1
-// @date        2022-11-20
+// @version     2.2
+// @date        2023-02-03
 // @author      github.com/kiriles90
 // @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
 // @downloadURL https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
@@ -42,7 +42,7 @@ var AKoiMain = {
     GetCommandButton: function () {
         try {
             var o = document.getElementsByTagName("ytd-download-button-renderer")[0];
-            return ((o.id = "y2mateconverter"), o.addEventListener("click", function (o) { AKoiMain.goToY2mate(o); }, !0), o);
+            return ((o.id = "y2mateconverter"), o.setAttribute("style", "display: inline-block"), o.addEventListener("click", function (o) { AKoiMain.goToY2mate(o); }, !0), o);
         } catch (o) {}
     },
     getVid: function (o) {
