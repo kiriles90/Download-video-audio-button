@@ -29,9 +29,7 @@
     };
     const checkDom = () => {
         vid = getVid(location.href);
-        if (!vid || !document.querySelector('#actions-inner')) {
-            return setTimeout(checkDom, 500);
-        }
+        if (!vid || !document.querySelector('#actions-inner')) return setTimeout(checkDom, 500);
         createButton();
         oldUrl = location.href;
         obs.disconnect();
