@@ -1,13 +1,12 @@
 // ==UserScript==
 // @name        Download video-audio button
 // @namespace   github.com/kiriles90
-// @version     2.2
-// @date        2023-02-03
+// @version     2.3
+// @date        2023-06-09
 // @author      github.com/kiriles90
 // @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
 // @downloadURL https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
-// @include     http://www.youtube.com/*
-// @include     https://www.youtube.com/*
+// @include     *://*.youtube.com/*
 // @run-at      document-idle
 // @grant       none
 // ==/UserScript==
