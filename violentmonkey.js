@@ -18,10 +18,7 @@
     };
     const goToY2mate = e => {
         e.stopPropagation();
-        window.open(
-            `https://y2mate.com/youtube-mp3/${vid}/?utm_source=chrome_addon`,
-            '_blank'
-        );
+        window.open(`https://y2mate.com/youtube-mp3/${vid}/?utm_source=chrome_addon`, '_blank');
     };
     const createButton = () => {
         const btn = document.querySelector('ytd-download-button-renderer');
