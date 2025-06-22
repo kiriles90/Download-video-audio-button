@@ -39,4 +39,6 @@
         if (oldUrl !== location.href) checkDom();
     });
     checkDom();
+    const sheet=document.head.appendChild(document.createElement("style")).sheet;
+    sheet.insertRule("ytd-popup-container, tp-yt-iron-overlay-backdrop, .annotation.annotation-type-custom.iv-branding{display:none!important}",0);
 })();
