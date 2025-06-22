@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        Download video-audio button
 // @namespace   github.com/kiriles90
-// @version     3.6
-// @date        2025-06-21
+// @version     3.8
+// @date        2025-06-22
 // @author      github.com/kiriles90
 // @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
 // @downloadURL https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
@@ -18,7 +18,7 @@
     };
     const goToY2mate = e => {
         e.stopPropagation();
-        window.open(`https://y2mate.com/youtube-mp3/${vid}/?utm_source=chrome_addon`, '_blank');
+        window.open(`https://y2mate.best/convert/?videoId=${vid}`, '_blank');
     };
     const createButton = () => {
         const btn = document.querySelector('ytd-download-button-renderer');
