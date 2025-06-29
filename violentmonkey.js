@@ -40,5 +40,5 @@
     });
     checkDom();
     const sheet=document.head.appendChild(document.createElement("style")).sheet;
-    sheet.insertRule("tp-yt-iron-overlay-backdrop, .annotation.annotation-type-custom.iv-branding{display:none!important}",0);
+    sheet.insertRule(".paper-toast-open, tp-yt-iron-overlay-backdrop, .annotation.annotation-type-custom.iv-branding{display:none!important}",0);
 })();
