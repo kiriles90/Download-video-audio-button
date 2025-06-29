@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        Download video-audio button
 // @namespace   github.com/kiriles90
-// @version     3.8
-// @date        2025-06-22
+// @version     3.9
+// @date        2025-06-29
 // @author      github.com/kiriles90
 // @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
 // @downloadURL https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
@@ -40,5 +40,5 @@
     });
     checkDom();
     const sheet=document.head.appendChild(document.createElement("style")).sheet;
-    sheet.insertRule("ytd-popup-container, tp-yt-iron-overlay-backdrop, .annotation.annotation-type-custom.iv-branding{display:none!important}",0);
+    sheet.insertRule("tp-yt-iron-overlay-backdrop, .annotation.annotation-type-custom.iv-branding{display:none!important}",0);
 })();
