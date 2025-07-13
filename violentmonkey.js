@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        Download video-audio button
 // @namespace   github.com/kiriles90
-// @version     3.9
-// @date        2025-06-29
+// @version     4.0
+// @date        2025-07-13
 // @author      github.com/kiriles90
 // @updateURL   https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
 // @downloadURL https://raw.githubusercontent.com/kiriles90/Download-video-audio-button/master/violentmonkey.js
@@ -40,5 +40,5 @@
     });
     checkDom();
     const sheet=document.head.appendChild(document.createElement("style")).sheet;
-    sheet.insertRule(".paper-toast-open, tp-yt-iron-overlay-backdrop, .annotation.annotation-type-custom.iv-branding{display:none!important}",0);
+    sheet.insertRule("tp-yt-paper-toast#toast, tp-yt-iron-overlay-backdrop, .annotation.annotation-type-custom.iv-branding{display:none!important}",0);
 })();
